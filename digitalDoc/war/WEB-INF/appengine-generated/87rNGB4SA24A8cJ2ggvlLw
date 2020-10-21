@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metapackage xmlns:os="http://opensuse.org/Standards/One_Click_Install" xmlns="http://opensuse.org/Standards/One_Click_Install">
+  <group distversion="openSUSE Factory">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE Factory</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/Factory</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="openSUSE Tumbleweed">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE Tumbleweed</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/openSUSE_Tumbleweed</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="openSUSE Leap 42.2">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE Leap 42.2</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/openSUSE_Leap_42.2</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="openSUSE Leap 42.1">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE Leap 42.1</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/openSUSE_Leap_42.1</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="openSUSE 13.2">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE 13.2</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/openSUSE_13.2</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="openSUSE 13.1">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE 13.1</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/openSUSE_13.1</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="openSUSE 12.3">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE 12.3</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/openSUSE_12.3</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="openSUSE 12.2">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE 12.2</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/openSUSE_12.2</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="openSUSE 12.1">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE 12.1</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/openSUSE_12.1</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="openSUSE 11.4">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE 11.4</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/openSUSE_11.4</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="openSUSE 11.3">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE 11.3</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/openSUSE_11.3</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="openSUSE 11.2">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for openSUSE 11.2</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/openSUSE_11.2</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+  <group distversion="Evergreen 11.1">
+    <name>flash-player</name>
+    <summary>Installs flash-player</summary>
+    <description>Installs the latest version of flash-player:
+    Adobe Flash Plugin and Standalone Player
+    </description>
+    <repositories>
+      <repository recommended="true">
+        <name>Packman Repository</name>
+        <summary>Packman package repository for Evergreen 11.1</summary>
+        <description>Latest versions and additional packages in the most popular 3rd party repository</description>
+        <url>http://ftp.uni-erlangen.de/pub/mirrors/packman/suse/Evergreen_11.1</url>
+      </repository>
+    </repositories>
+    <software>
+      <item recommended="true">
+        <name>flash-player</name>
+        <summary>flash-player &gt; flash-player</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-gnome</name>
+        <summary>flash-player &gt; flash-player-gnome</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+      <item recommended="true">
+        <name>flash-player-ppapi</name>
+        <summary>flash-player &gt; flash-player-ppapi</summary>
+        <description>Adobe Flash Plugin and Standalone Player</description>
+      </item>
+    </software>
+  </group>
+</metapackage>

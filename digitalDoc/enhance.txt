@@ -1,0 +1,1 @@
+java -cp /home/lydia/Soft/appengine-java-sdk-1.9.71/lib/appengine-tools-api.jar:/home/lydia/git/transporte/digitalDoc/war/WEB-INF/classes:/home/lydia/Soft/appengine-java-sdk-1.9.71/lib/user/appengine-api-1.0-sdk-1.9.71.jar com.google.appengine.tools.enhancer.Enhance /home/lydia/git/transporte/digitalDoc/war/WEB-INF/classes/com/digitaldoc/model/*.class
