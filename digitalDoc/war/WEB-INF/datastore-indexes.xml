@@ -1,3 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- Indices written at Sun, 25 Oct 2020 00:50:21 CEST -->
+
 <datastore-indexes autoGenerate="true">
+
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Usuario" ancestor="false" source="auto">
+        <property name="perfil" direction="asc"/>
+        <property name="empresa" direction="asc"/>
+    </datastore-index>
+
 </datastore-indexes>
