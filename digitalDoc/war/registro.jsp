@@ -101,7 +101,7 @@
                      		<p>Facturas</p>
                 	 		</a>
            		</li>
-           		<li>
+           		<!--  li>
                  		<a href="/digitalDoc?op=anticipos&id=<%=usuario.getId()%>">
                      		<i class="pe-7s-news-paper"></i>
                      		<p>Anticipos</p>
@@ -112,7 +112,7 @@
                      		<i class="pe-7s-news-paper"></i>
                      		<p>Cancelaciones</p>
                	 		</a>
-           		</li>
+           		</li> -->
 
             </ul>
     	</div>

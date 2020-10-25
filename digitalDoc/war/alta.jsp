@@ -17,6 +17,9 @@
 		
 	SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 	List<Usuario> listUsuarios = (List<Usuario>) request.getAttribute("listUsuarios");
+	if(listUsuarios.isEmpty()){
+		System.out.println("Sin usuarios");
+	}
 	Usuario usuario = (Usuario) request.getAttribute("usuario");
 	Documento factura = (Documento) request.getAttribute("factura");
 	String urlUpload= blobstoreService.createUploadUrl("/upload");
@@ -165,7 +168,7 @@
                      		<p>Facturas</p>
                 	 		</a>
            		</li>
-           		<li>
+           		<!-- li>
                  		<a href="/digitalDoc?op=anticipos&id=<%=usuario.getId()%>">
                      		<i class="pe-7s-news-paper"></i>
                      		<p>Anticipos</p>
@@ -176,7 +179,7 @@
                      		<i class="pe-7s-news-paper"></i>
                      		<p>Cancelaciones</p>
                	 		</a>
-           		</li>
+           		</li-->
 
             </ul>
     	</div>
@@ -213,13 +216,13 @@
                                                 <%
                                                 	if(empresa != null){
                                                 %>
-                                                	   <option value=<%=empresa.getId()%>><%=empresa.getEmpresa()%></option>
+                                                	   <option value="<%=idEmpresa%>"><%=empresa.getEmpresa()%></option>
                                                 <%		
                                                 	}
                                                 	for(Usuario cliente : listUsuarios){
                                                 		if(cliente.getEmpresa() != null){
                                                	%>
-                                               			<option value=<%=cliente.getId()%>><%=cliente.getEmpresa()%></option> 		
+                                               			<option value="<%=cliente.getId()%>"><%=cliente.getEmpresa()%></option> 		
                                                 <%		
                                                 		}
                                                 	}
