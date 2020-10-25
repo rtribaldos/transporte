@@ -449,16 +449,16 @@ public class DigitalDocServlet extends HttpServlet {
 		StringBuffer asunto = new StringBuffer();
 		StringBuffer cuerpo = new StringBuffer();
 
-		UtilDigitalDoc.cargaMailCliente(asunto, cuerpo, factura.getUsuario(),
-				factura.getSerie() + "_" + factura.getNumero());
+		UtilDigitalDoc.cargaMailCliente(asunto, cuerpo, factura.getUsuario(), factura.getSerie() + "_" + factura.getNumero());
 		String destino = factura.getUsuario().getEmail();
 		if (!"".equals(factura.getUsuario().getOtrosEmails())
 				&& !"null".equals(factura.getUsuario().getOtrosEmails())) {
 			destino = factura.getUsuario().getOtrosEmails();
 		}
 
-		UtilDigitalDoc.enviaCorreo(destino, cuerpo.toString(), asunto.toString(), firmado,
-				factura.getSerie() + "_" + factura.getNumero() + "_firmado.pdf", false);
+		UtilDigitalDoc.enviaCorreo(destino, cuerpo.toString(), asunto.toString());
+		
+		//, firmado,factura.getSerie() + "_" + factura.getNumero() + "_firmado.pdf", false);
 
 		factura.setEnviado(true);
 		pm.makePersistent(factura);

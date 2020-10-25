@@ -42,10 +42,25 @@ import com.itextpdf.text.pdf.security.MakeSignature;
 import com.itextpdf.text.pdf.security.MakeSignature.CryptoStandard;
 import com.itextpdf.text.pdf.security.PrivateKeySignature;
 
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
+
+import java.util.Properties;
+
+
 public class UtilDigitalDoc {
 	
 	public static final String KEYSTORE = "/resources/garceray.pfx";
 	public static final char[] PASSWORD = "4321".toCharArray();
+	public static final String EMAIL_NOTIFICA = "admin@garceray.com";
+	public static final String PWD_MAIL= "TGarcerai1972";
+	
 		
 	public static void cargaMailEmpleado(StringBuffer asunto, StringBuffer cuerpo, Usuario user){
 		asunto.append("Su nómina correspondiente al mes de x está disponible");
@@ -93,6 +108,48 @@ public class UtilDigitalDoc {
 		cuerpo.append("https://garceray.appspot.com/");
 		cuerpo.append("</body></html>");
 	}
+	
+	public static void enviaCorreo(String email, String sHtml, String subject) {
+
+        Properties prop = new Properties();
+		prop.put("mail.smtp.host", "smtp.garceray.com");
+        prop.put("mail.smtp.port", "587");
+        prop.put("mail.smtp.auth", "true");
+        prop.put("mail.smtp.starttls.enable", "true"); //TLS
+
+        Session session = Session.getInstance(prop,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(EMAIL_NOTIFICA, PWD_MAIL);
+                    }
+                });
+
+        try {
+        	        	        	
+        	MimeMessage message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(EMAIL_NOTIFICA));
+            message.setRecipients(
+                    Message.RecipientType.TO,
+                    InternetAddress.parse(email)
+            );
+            message.setSubject(subject);
+            
+            MimeBodyPart textPart = new MimeBodyPart();
+        	textPart.setContent(sHtml, "text/html; charset=utf-8");
+            
+        	
+        	Multipart multipart = new MimeMultipart("mixed");
+		    multipart.addBodyPart(textPart);
+		    
+		    message.setContent(multipart);
+
+            Transport.send(message);
+
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+	}
+	
 	
 	
 	public static void enviaCorreo(String email, String sHtml, String subject, byte[] attachmentBytes, String attachmentName, boolean copiaConta){
@@ -301,7 +358,7 @@ public class UtilDigitalDoc {
         return os.toByteArray();
 	}
  
-	public static void main(String[] args) throws GeneralSecurityException, IOException, DocumentException, URISyntaxException {
+	public static void main2(String[] args) throws GeneralSecurityException, IOException, DocumentException, URISyntaxException {
 	
 		 KeyManagerFactory kmf = javax.net.ssl.KeyManagerFactory.getInstance("SunX509");
          KeyStore keystore = KeyStore.getInstance("PKCS12");
@@ -338,6 +395,46 @@ public class UtilDigitalDoc {
 	  
 	}
 	
+	
+	public static void main(String[] args) {
+
+        final String username = "admin@garceray.com";
+        final String password = "TGarcerai1972";
+
+        Properties prop = new Properties();
+		prop.put("mail.smtp.host", "smtp.garceray.com");
+        prop.put("mail.smtp.port", "587");
+        prop.put("mail.smtp.auth", "true");
+        prop.put("mail.smtp.starttls.enable", "true"); //TLS
+
+        Session session = Session.getInstance(prop,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(username, password);
+                    }
+                });
+
+        try {
+
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(username));
+            message.setRecipients(
+                    Message.RecipientType.TO,
+                    InternetAddress.parse("raultribaldos@gmail.com")
+            );
+            message.setSubject("Testeando correo....");
+            message.setText("Esto es una prueba,"
+                    + "\n\n Por favor no m envies spam al mail!");
+
+            Transport.send(message);
+
+            System.out.println("Hecho");
+
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+    }
+
 	
 	public static String findKeyAlias(KeyStore store, byte[] storeFile, char[] password) throws Exception {
 	   	 
