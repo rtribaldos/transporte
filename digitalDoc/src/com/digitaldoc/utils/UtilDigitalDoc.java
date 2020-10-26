@@ -49,7 +49,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-
+import javax.mail.util.ByteArrayDataSource;
 
 import java.util.Properties;
 
@@ -109,7 +109,7 @@ public class UtilDigitalDoc {
 		cuerpo.append("</body></html>");
 	}
 	
-	public static void enviaCorreo(String email, String sHtml, String subject) {
+	public static void enviaCorreo(String email, String sHtml, String subject, byte[] facturaFirmada, String nomFactura) {
 
         Properties prop = new Properties();
 		prop.put("mail.smtp.host", "smtp.garceray.com");
@@ -133,13 +133,18 @@ public class UtilDigitalDoc {
                     InternetAddress.parse(email)
             );
             message.setSubject(subject);
-            
-            MimeBodyPart textPart = new MimeBodyPart();
-        	textPart.setContent(sHtml, "text/html; charset=utf-8");
-            
+           
+            MimeBodyPart messageBodyPart = new MimeBodyPart();
+            messageBodyPart.setContent(sHtml, "text/html");
+                                  
+        	MimeBodyPart attachPart = new MimeBodyPart();
+        	ByteArrayDataSource bds = new ByteArrayDataSource(facturaFirmada, "application/pdf"); 
+        	attachPart.setDataHandler(new DataHandler(bds));
+        	attachPart.setFileName(nomFactura);         	
         	
-        	Multipart multipart = new MimeMultipart("mixed");
-		    multipart.addBodyPart(textPart);
+        	Multipart multipart = new MimeMultipart();		   
+        	multipart.addBodyPart(messageBodyPart);
+        	multipart.addBodyPart(attachPart);
 		    
 		    message.setContent(multipart);
 

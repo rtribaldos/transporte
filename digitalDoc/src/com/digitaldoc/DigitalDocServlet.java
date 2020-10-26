@@ -456,9 +456,10 @@ public class DigitalDocServlet extends HttpServlet {
 			destino = factura.getUsuario().getOtrosEmails();
 		}
 
-		UtilDigitalDoc.enviaCorreo(destino, cuerpo.toString(), asunto.toString());
+		UtilDigitalDoc.enviaCorreo(destino, cuerpo.toString(), asunto.toString(), 
+				firmado,factura.getSerie() + "_" + factura.getNumero() + "_firmado.pdf");
 		
-		//, firmado,factura.getSerie() + "_" + factura.getNumero() + "_firmado.pdf", false);
+		
 
 		factura.setEnviado(true);
 		pm.makePersistent(factura);
