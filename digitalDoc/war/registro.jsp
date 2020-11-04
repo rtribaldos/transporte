@@ -156,8 +156,8 @@
 									<div class="row">
 										<div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Email</label>
-                                                <input type="email" class="form-control" placeholder="Emails separados por comas" name="email" value="<%=email%>">
+                                                <label for="exampleInputEmail1">Usuario</label>
+                                                <input type="text" class="form-control" placeholder="Usuario" name="email" value="<%=email%>">
                                             </div>
                                         </div>
 									</div>
