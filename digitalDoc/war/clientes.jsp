@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="author" content="Raul Tribaldos"/>
 <meta name="description" content="Garceray"/>
 <meta name="keywords" content="Garceray, transporte, camiones"/>
@@ -235,7 +236,7 @@
 	<script type="text/javascript">
 		    var elems = document.getElementsByClassName('confirmation');
 		    var confirmIt = function (e) {
-		        if (!confirm('¿Seguro que desea borrar el cliente?')) e.preventDefault();
+		        if (!confirm('Â¿Seguro que desea borrar el cliente?')) e.preventDefault();
 		    };
 		    for (var i = 0, l = elems.length; i < l; i++) {
 		        elems[i].addEventListener('click', confirmIt, false);
