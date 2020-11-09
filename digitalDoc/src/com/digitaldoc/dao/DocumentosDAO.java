@@ -115,7 +115,7 @@ public static Documento getDocumento(PersistenceManager pm, String id) throws Ex
 		Query query = pm.newQuery(Documento.class);
 		try{
 			Calendar calendar = Calendar.getInstance();
-			calendar.add(Calendar.MONTH, -2);
+			calendar.add(Calendar.MONTH, -6);
 			
 			//
 			query.setFilter("fecha > sparam");
