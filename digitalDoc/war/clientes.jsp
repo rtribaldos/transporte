@@ -151,7 +151,7 @@
 					            <tr>
 					                <th>Empresa</th>
 					                <th>Nombre</th>
-					                <th>Email</th>
+					                <th>Usuario</th>
 					                <th>Tel&eacute;fono</th>
 					                <th>Borrar</th>
 					            </tr>
@@ -160,7 +160,7 @@
 					            <tr>
 					                <th>Empresa</th>
 					                <th>Nombre</th>
-					                <th>Email</th>
+					                <th>Usuario</th>
 					                <th>Tel&eacute;fono</th>
 					                <th>Borrar</th>
 					            </tr>

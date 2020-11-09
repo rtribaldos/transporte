@@ -426,9 +426,9 @@ public class DigitalDocServlet extends HttpServlet {
 		String fileName = req.getParameter("fileName");
 		for (int i = 0; i < factura.getFicheros().size(); i++) {
 			if (fileName.equals(factura.getFicheros().get(i).getFilename())) {
-				if (factura.getFichPrincipal().equals(fileName)) {
+				if (factura.getFichPrincipal() != null && factura.getFichPrincipal().equals(fileName)) {
 					factura.setFichPrincipal("");
-				} else if (factura.getFichAnticipo().equals(fileName)) {
+				} else if (factura.getFichAnticipo() != null && factura.getFichAnticipo().equals(fileName)) {
 					factura.setFichAnticipo("");
 				}
 				factura.getFicheros().remove(i);
