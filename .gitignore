@@ -1,2 +1,4 @@
 /digitalDoc/target
 /digitalDoc/bin
+/digitalDoc/war/WEB-INF/classes/com/digitaldoc/model/
+
