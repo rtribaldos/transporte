@@ -215,7 +215,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>CP</label>
-                                                <input type="number" class="form-control" placeholder="CP" name="cp"  value="<%=cp%>">
+                                                <input type="text" class="form-control" placeholder="CP" name="cp"  value="<%=cp%>">
                                         	</div>
                                     	</div>
                                    </div> 	
