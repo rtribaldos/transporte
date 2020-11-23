@@ -76,10 +76,10 @@
                     </a>
                 </li>
                  <li class="active">
-                 		<a href="#">
-                     		<i class="pe-7s-news-paper"></i>
-                     		<p>Facturas</p>
-                	 		</a>
+               		<a href="#">
+                   		<i class="pe-7s-news-paper"></i>
+                   		<p>Facturas</p>
+           	 		</a>
            		</li>
            		
            		<!-- 
@@ -196,7 +196,7 @@
 					        			<td><center><a href="<%=sEdit%>"><%=factura.getUsuario().getEmpresa()%></a></center></td>
 					                	<td><center><a href="<%=sEdit%>"><%=factura.getSerie()%></a></center></td>
 					                	<td><center><a href="<%=sEdit%>"><%=factura.getNumero()%></a></center></td>
-					                	<td><center><%=factura.getImporte()%></center></td>
+					                	<td><center><%=factura.getImporteFormatted()%></center></td>
 					                	<td><center><%=fecha%></center></td>
 					                	<td><center><%=factura.getIdAnticipo()%></center></td>
 					                	<td><center><%=factura.getIdCancelacion()%></center></td>

@@ -194,7 +194,6 @@ public class Documento implements Serializable{
 
 	public Documento() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getSerie() {
@@ -208,7 +207,11 @@ public class Documento implements Serializable{
 	public double getImporte() {
 		return importe;
 	}
-
+	
+	public String getImporteFormatted() {
+		return String.format( "%.2f", importe );
+	}
+	
 	public void setImporte(double importe) {
 		this.importe = importe;
 	}

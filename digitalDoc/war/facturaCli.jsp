@@ -39,12 +39,12 @@
 		if(factura.getFecha() != null){
 			fecha = df.format(factura.getFecha());
 		}
-		numFactura= factura.getNumero();
-		nomFichero =factura.getFichPrincipal();
-		importe= String.valueOf(factura.getImporte());
+		numFactura = factura.getNumero();
+		nomFichero = factura.getFichPrincipal();
+		importe = factura.getImporteFormatted();
 		empresa = factura.getUsuario();
-		serie=factura.getSerie();
-		habilitado="readonly";
+		serie = factura.getSerie();
+		habilitado = "readonly";
 	}
 %>
 

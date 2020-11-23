@@ -141,7 +141,7 @@
 					        			<td><a href="<%=sEdit%>"><%=factura.getUsuario().getEmpresa()%></a></td>
 					                	<td><a href="<%=sEdit%>"><%=factura.getSerie()%></a></td>
 					                	<td><a href="<%=sEdit%>"><%=factura.getNumero()%></a></td>
-					                	<td><%=factura.getImporte()%></td>
+					                	<td><%=factura.getImporteFormatted()%></td>
 					                	<td><%=fecha%></td>
 					                </tr>
 					        <%

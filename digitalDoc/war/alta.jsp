@@ -60,7 +60,7 @@
 			urlAnticipo= factura.getUrlAnticipo();
 		}
 		
-		importe= String.valueOf(factura.getImporte());
+		importe = factura.getImporteFormatted();
 		empresa = factura.getUsuario();
 		idEmpresa= String.valueOf(empresa.getId());
 		serie=factura.getSerie();
@@ -77,7 +77,7 @@
 	<script src="assets/js/jquery-ui-1.10.4.custom.js"></script>
 	<script src="assets/js/jquery.mask.min.js"></script>
 	
-	 <!--   Core JS Files   -->
+	<!--   Core JS Files   -->
     
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
@@ -123,8 +123,6 @@
 		$(function () {
 			 $( "#datepicker" ).datepicker();
 		});
-		
-		$('.numeric-mask').mask("#.##0,00", {reverse: true});
 	</script>
 	
     <!-- Bootstrap core CSS     -->
