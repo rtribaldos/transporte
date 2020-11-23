@@ -75,6 +75,7 @@
 
 	<script src="assets/js/jquery-1.10.2.js"></script>
 	<script src="assets/js/jquery-ui-1.10.4.custom.js"></script>
+	<script src="assets/js/jquery.mask.min.js"></script>
 	
 	 <!--   Core JS Files   -->
     
@@ -98,6 +99,8 @@
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
 	
+	<script src="assets/js/numeric.js"></script>
+	
 	<script>
 		 $.datepicker.regional['es'] = {
 			 closeText: 'Cerrar',
@@ -120,6 +123,8 @@
 		$(function () {
 			 $( "#datepicker" ).datepicker();
 		});
+		
+		$('.numeric-mask').mask("#.##0,00", {reverse: true});
 	</script>
 	
     <!-- Bootstrap core CSS     -->
@@ -143,7 +148,7 @@
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="green" data-image="assets/img/garceray/logo_transparente.png">
+    <div class="sidebar" data-color="orange" data-image="assets/img/garceray/logo_transparente.png">
 
     <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
@@ -257,7 +262,7 @@
                                     	<div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Importe</label>
-                                                <input type="text" class="form-control" placeholder="Importe" name="importe" required value="<%=importe%>">
+                                                <input type="text" class="form-control numeric-mask" placeholder="Importe" name="importe" required value="<%=importe%>">
                                             </div>
                                         </div>
                                     </div>

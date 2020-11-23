@@ -128,7 +128,7 @@
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="green" data-image="assets/img/garceray/logo_transparente.png">
+    <div class="sidebar" data-color="orange" data-image="assets/img/garceray/logo_transparente.png">
 
     <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
