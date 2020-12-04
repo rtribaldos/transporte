@@ -27,6 +27,7 @@
 	String cp="";
 	String acreedor="";
 	String empleado="";
+	String idioma="es";
 	boolean edicion=false;
 	
 	if(cliente!=null){
@@ -46,11 +47,11 @@
 		poblacion= cliente.getPoblacion();
 		pais = cliente.getPais();
 		cp= cliente.getCp();
+		idioma = cliente.getIdioma();
 		if(cliente.isAcreedor()) acreedor="checked";
 		if(cliente.isEmpleado()) empleado="checked";
 	}
 	
-	System.out.println(String.valueOf(usuario.getId()));
 %>
 
     <!-- Bootstrap core CSS     -->
@@ -75,7 +76,7 @@
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="orange" data-image="assets/img/garceray/logo_transparente.png">
+    <div class="sidebar" data-color="azure" data-image="assets/img/garceray/logo_transparente.png">
 
     <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
@@ -142,7 +143,7 @@
                                         <div class="col-md-8">
                                             <div class="form-group">
                                                 <label>Empresa</label>
-                                                <input type="text" class="form-control" placeholder="Empresa"  name="empresa" value="<%=empresa%>">
+                                                <input type="text" class="form-control" placeholder="Empresa"  required name="empresa" value="<%=empresa%>">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -156,7 +157,7 @@
 										<div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Usuario</label>
-                                                <input type="text" class="form-control" placeholder="Usuario" name="email" value="<%=email%>">
+                                                <input type="text" class="form-control" placeholder="Usuario" required name="email" value="<%=email%>">
                                             </div>
                                         </div>
 									</div>
@@ -164,7 +165,7 @@
 										<div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Emails para env&iacute;os</label>
-                                                <input type="otrosEmails" class="form-control" placeholder="Emails separados por comas" name="otrosEmails" value="<%=otrosEmails%>">
+                                                <input type="otrosEmails" class="form-control" required placeholder="Emails separados por comas" name="otrosEmails" value="<%=otrosEmails%>">
                                             </div>
                                         </div>
 									</div>
@@ -173,7 +174,7 @@
                                         <div class="col-md-8">
                                             <div class="form-group">
                                                 <label>Nombre</label>
-                                                <input type="text" class="form-control" placeholder="Nombre y Apellidos" name="nombre" value="<%=nombre%>">
+                                                <input type="text" class="form-control" required placeholder="Nombre y Apellidos" name="nombre" value="<%=nombre%>">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -194,7 +195,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Password</label>
-                                                <input type="text" class="form-control" placeholder="Password" name="password" value="<%=password%>">
+                                                <input type="text" class="form-control" placeholder="Password" required name="password" value="<%=password%>">
                                             </div>
                                         </div>
                                     </div>
@@ -228,16 +229,57 @@
                                         </div>
                                         <div class="col-md-4">
                                         	<div class="form-group">
-                                                <center><label>Acreedor</label></center>
-                                                <input type="checkbox" name="acreedor" value="1" class="form-control" placeholder="Acreedor" <%=acreedor%>>
+                                                <center><label>Idioma</label></center>
+                                                <select name="idioma" class="form-control" placeholder="Idioma">
+                                        <%
+                                        	if(idioma.equals("es")){
+                                        %>
+                                        	<option value="es" selected>Español</option>
+                                        <%
+                                        	} else {
+                                        %>
+                                        	<option value="es">Español</option>
+                                        <%
+                                        	}
+                                        	if(idioma.equals("fr")){
+                                        		
+                                        %>
+                                        	<option value="fr" selected>Francés</option>
+                                        <%
+                                        	} else {
+                                        %>
+                                        	<option value="fr">Francés</option>
+                                        <%
+                                        	}
+                                        	if(idioma.equals("en")){
+                                        %>
+                                        	<option value="en" selected>Inglés</option>
+                                        <%
+                                        	} else {
+                                        %>
+                                        	<option value="en">Inglés</option>
+                                        <%
+                                        	}
+                                        %>
+	                                        </select>
                                             </div>
                                         </div>
-                                         <div class="col-md-4">
-                                        	<div class="form-group">
-                                                 <center><label>Empleado</label></center>
-                                                <input type="checkbox" name="empleado" value="1" class="form-control" placeholder="Empleado" <%=empleado%>>
-                                            </div>
-                                         </div>
+                                         
+                                   </div>
+                                   <div class="row">
+	                                   <div class="col-md-4">
+	                                         	<div class="form-group">
+	                                                <center><label>Acreedor</label></center>
+	                                                <input type="checkbox" name="acreedor" value="1" class="form-control" placeholder="Acreedor" <%=acreedor%>>
+	                                               
+	                                            </div>
+	                                   </div>
+	                                   <div class="col-md-4">
+	                                         	<div class="form-group">
+	                                                <center><label>Empleado</label></center>
+	                                                <input type="checkbox" name="empleado" value="1" class="form-control" placeholder="Empleado" <%=empleado%>>
+	                                            </div>
+	                                   </div>
                                    </div>
                                    
                                    <br/>

@@ -127,6 +127,7 @@ public class UsuarioDAO {
 		String pais= req.getParameter("pais");
 		String acreedor= req.getParameter("acreedor");
 		String empleado= req.getParameter("empleado");
+		String idioma = req.getParameter("idioma");
 		
 		Usuario usuario = new Usuario();
 		usuario.setActivo(true);
@@ -144,6 +145,8 @@ public class UsuarioDAO {
 		usuario.setPerfil("cliente");
 		usuario.setTelefono(telefono);
 		usuario.setPais(pais);
+		usuario.setIdioma(idioma);
+		
 		if("1".equals(acreedor)){
 			usuario.setAcreedor(true);
 		}else{
@@ -176,6 +179,7 @@ public class UsuarioDAO {
 		String pais= req.getParameter("pais");
 		String acreedor= req.getParameter("acreedor");
 		String empleado= req.getParameter("empleado");
+		String idioma = req.getParameter("idioma");
 		
 		Usuario usuario = UsuarioDAO.getUsuario(pm, Long.parseLong(sIdCli));
 		usuario.setActivo(true);
@@ -193,6 +197,8 @@ public class UsuarioDAO {
 		usuario.setPerfil("cliente");
 		usuario.setTelefono(telefono);
 		usuario.setPais(pais);
+		usuario.setIdioma(idioma);
+		
 		if("1".equals(acreedor)){
 			usuario.setAcreedor(true);
 		}else{

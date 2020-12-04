@@ -16,8 +16,21 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.StringTokenizer;
 
+import javax.activation.DataHandler;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+import javax.mail.util.ByteArrayDataSource;
 import javax.net.ssl.KeyManagerFactory;
 
 import com.digitaldoc.model.AnticipoFile;
@@ -42,17 +55,6 @@ import com.itextpdf.text.pdf.security.MakeSignature;
 import com.itextpdf.text.pdf.security.MakeSignature.CryptoStandard;
 import com.itextpdf.text.pdf.security.PrivateKeySignature;
 
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
-import javax.mail.util.ByteArrayDataSource;
-
-import java.util.Properties;
-
 
 public class UtilDigitalDoc {
 	
@@ -74,17 +76,45 @@ public class UtilDigitalDoc {
 		cuerpo.append("</body></html>");
 	}
 	
-	public static void cargaMailCliente(StringBuffer asunto, StringBuffer cuerpo, Usuario user, String factura){
-		asunto.append("Su factura " + factura +" está disponible");
-		cuerpo.append("<html><body>Muy Sres. Nuestros,<br><br>");
-		cuerpo.append("Su factura " + factura +" est&aacute; disponible en nuestro sistema Online, puede consultar y descargar "
-				+ " toda la documentaci&oacute;n correspondiente a esta factura desde nuestro sistema Online.<br><br>");
-		cuerpo.append("https://garceray.appspot.com/");
-		cuerpo.append("<br>Les recordamos que toda la documentaci&oacute;n descargada desde nuestro sistema, est&aacute; firmada digitalmente con la firma de Garceray "
-				+ "Log&iacute;stica 2000 S.L.<br><br>");
-		cuerpo.append("Recuerde que para entrar en nuestro sistema debe usar su correo como usuario.<br><br>");
-		cuerpo.append("Muchas gracias.");
-		cuerpo.append("</body></html>");
+	public static void cargaMailCliente(StringBuffer asunto, StringBuffer cuerpo, Usuario user, String factura, Usuario usuario){
+		
+		if(usuario.getIdioma() != null || usuario.getIdioma().equals("fr")) {
+			
+			asunto.append("Facture " + factura +" disponible");
+			
+			cuerpo.append("<html><body>Bonjour.<br><br>");
+			cuerpo.append("Ci-joint notre facture  " + factura +"<br>Vous pouvez aussi la trouver avec toute la documentation correspondante dans l’espace"
+					+ " clients de notre site web.<br><br>www.garceray.com<br><br>");
+			cuerpo.append("Usuaire :  " + usuario.getEmail() + "<br>Mot de passe : " + usuario.getPassword() + "<br><br>");
+			cuerpo.append("N´hésitez pas a nous contacter pour n’importe quelle question. <br> Merci bien!!!");
+			cuerpo.append("<br><br>Cordialement,<br>");
+			cuerpo.append("<img src=\"/assets/img/garceray/firma.png\">");
+			//
+		}else if(usuario.getIdioma() != null || usuario.getIdioma().equals("en")) {
+			
+			asunto.append("Our invoice " + factura +" ");
+			
+			cuerpo.append("<html><body>Good day.<br><br>");
+			cuerpo.append("Please see enclosed our invoice  " + factura +"<br>You can also find it along with all documentation in the customer area of our website.<br><br>www.garceray.com<br><br>");
+			cuerpo.append("Username :  " + usuario.getEmail() + "<br>Password : " + usuario.getPassword() + "<br><br>");
+			cuerpo.append("Do not hesitate to contact us for any clarification. <br> Thank you so much!!!!!!");
+			cuerpo.append("<br><br>Best Regards,<br>");
+			cuerpo.append("<img src=\"/assets/img/garceray/firma.png\">");
+			
+		}else {
+			
+			asunto.append("Our invoice " + factura +" ");
+			
+			cuerpo.append("<html><body>Good day.<br><br>");
+			cuerpo.append("Please see enclosed our invoice  " + factura +"<br>You can also find it along with all documentation in the customer area of our website.<br><br>www.garceray.com<br><br>");
+			cuerpo.append("Username :  " + usuario.getEmail() + "<br>Password : " + usuario.getPassword() + "<br><br>");
+			cuerpo.append("Do not hesitate to contact us for any clarification. <br> Thank you so much!!!!!!");
+			cuerpo.append("<br><br>Best Regards,<br>");
+			cuerpo.append("<img src=\"/assets/img/garceray/firma.png\">");
+			
+		}
+		
+		
 	}
 	
 	public static void cargaMailAcreedor(StringBuffer asunto, StringBuffer cuerpo, Usuario user, String factura){

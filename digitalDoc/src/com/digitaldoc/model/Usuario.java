@@ -71,6 +71,8 @@ public class Usuario implements Serializable{
 	@Persistent
 	private boolean empleado;
 	
+	@Persistent
+	private String idioma;
 	
 	@Persistent(mappedBy = "usuario")
     private List<Documento> facturas;
@@ -87,7 +89,7 @@ public class Usuario implements Serializable{
 	public Usuario(Long id, String nombre, String empresa, String cif, String email, String otrosEmails,
 			String notificaciones, String password, String telefono, String cp, String provincia, String poblacion,
 			String direccion, boolean activo, String perfil, String pais, boolean acreedor, boolean empleado,
-			List<Documento> facturas, List<Anticipo> anticipos, List<Cancelacion> cancelaciones) {
+			List<Documento> facturas, List<Anticipo> anticipos, List<Cancelacion> cancelaciones, String idioma) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -110,6 +112,7 @@ public class Usuario implements Serializable{
 		this.facturas = facturas;
 		this.anticipos = anticipos;
 		this.cancelaciones = cancelaciones;
+		this.idioma = idioma;
 	}
 
 	public Usuario() {
@@ -295,6 +298,13 @@ public class Usuario implements Serializable{
 	public void setOtrosEmails(String otrosEmails) {
 		this.otrosEmails = otrosEmails;
 	}
-	
-	
+
+	public String getIdioma() {
+		return idioma;
+	}
+
+	public void setIdioma(String idioma) {
+		this.idioma = idioma;
+	}
+		
 }

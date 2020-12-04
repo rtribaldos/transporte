@@ -15,7 +15,7 @@
  *
  * The styles given here are suitable for the demos that are used with the standard DataTables
  * distribution (see www.datatables.net). You will most likely wish to modify these styles to
- * meet the layout requirements of your site.
+ * meet the layout requirements of Lyour site.
  *
  * Common issues:
  *   'full_numbers' pagination - I use an extra selector on the body tag to ensure that there is
@@ -366,15 +366,15 @@ table.display tr.odd.row_selected td {
  */
 /* For the standard odd/even */
 tr.odd td.sorting_1 {
-	background-color: #ec8a49;
+	background-color: #C2D708;
 }
 
 tr.odd td.sorting_2 {
-	background-color: #ec8a49;
+	background-color: #C2D708;
 }
 
 tr.odd td.sorting_3 {
-	background-color: #ec8a49;
+	background-color: #C2D708;
 }
 
 tr.even td.sorting_1 {
