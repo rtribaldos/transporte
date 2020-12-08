@@ -569,6 +569,10 @@ public class DigitalDocServlet extends HttpServlet {
 	public void cargaCliente(HttpServletRequest req, PersistenceManager pm) throws NumberFormatException, Exception {
 		String sId = req.getParameter("idCliente");
 		Usuario usuario = UsuarioDAO.getUsuario(pm, Long.parseLong(sId));
+		if(usuario.getIdioma() == null) {
+			usuario.setIdioma("es");
+			pm.makePersistent(usuario);
+		}
 		req.setAttribute("cliente", usuario);
 	}
 
