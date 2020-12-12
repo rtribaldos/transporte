@@ -78,11 +78,11 @@ public class UtilDigitalDoc {
 	
 	public static void cargaMailCliente(StringBuffer asunto, StringBuffer cuerpo, Usuario user, String factura, Usuario usuario){
 		
-		if(usuario.getIdioma() != null || usuario.getIdioma().equals("fr")) {
+		if(usuario.getIdioma() != null && usuario.getIdioma().equals("fr")) {
 			
 			asunto.append("Facture " + factura +" disponible");
 			
-			cuerpo.append("<html><body>Bonjour.<br><br>");
+			cuerpo.append("<html charset=\"ISO-8859-1\"><body>Bonjour.<br><br>");
 			cuerpo.append("Ci-joint notre facture  " + factura +"<br>Vous pouvez aussi la trouver avec toute la documentation correspondante dans l’espace"
 					+ " clients de notre site web.<br><br>www.garceray.com<br><br>");
 			cuerpo.append("Usuaire :  " + usuario.getEmail() + "<br>Mot de passe : " + usuario.getPassword() + "<br><br>");
@@ -90,11 +90,11 @@ public class UtilDigitalDoc {
 			cuerpo.append("<br><br>Cordialement,<br>");
 			cuerpo.append("<img src=\"/assets/img/garceray/firma.png\">");
 			//
-		}else if(usuario.getIdioma() != null || usuario.getIdioma().equals("en")) {
+		}else if(usuario.getIdioma() != null && usuario.getIdioma().equals("en")) {
 			
 			asunto.append("Our invoice " + factura +" ");
 			
-			cuerpo.append("<html><body>Good day.<br><br>");
+			cuerpo.append("<html charset=\"ISO-8859-1\"><body>Good day.<br><br>");
 			cuerpo.append("Please see enclosed our invoice  " + factura +"<br>You can also find it along with all documentation in the customer area of our website.<br><br>www.garceray.com<br><br>");
 			cuerpo.append("Username :  " + usuario.getEmail() + "<br>Password : " + usuario.getPassword() + "<br><br>");
 			cuerpo.append("Do not hesitate to contact us for any clarification. <br> Thank you so much!!!!!!");
@@ -103,13 +103,13 @@ public class UtilDigitalDoc {
 			
 		}else {
 			
-			asunto.append("Our invoice " + factura +" ");
+			asunto.append("Factura " + factura +" disponible");
 			
-			cuerpo.append("<html><body>Good day.<br><br>");
-			cuerpo.append("Please see enclosed our invoice  " + factura +"<br>You can also find it along with all documentation in the customer area of our website.<br><br>www.garceray.com<br><br>");
-			cuerpo.append("Username :  " + usuario.getEmail() + "<br>Password : " + usuario.getPassword() + "<br><br>");
-			cuerpo.append("Do not hesitate to contact us for any clarification. <br> Thank you so much!!!!!!");
-			cuerpo.append("<br><br>Best Regards,<br>");
+			cuerpo.append("<html charset=\"ISO-8859-1\"><body>Buenos días.<br><br>");
+			cuerpo.append("Adjuntamos  nuestra factura   " + factura +"<br>Puedo consultar y descargar toda la documentación correspondiente en el área de clientes de nuestra página web.<br><br>www.garceray.com<br><br>");
+			cuerpo.append("Usuario :  " + usuario.getEmail() + "<br>Contraseña : " + usuario.getPassword() + "<br><br>");
+			cuerpo.append("No duden en contactarnos para cualquier aclaración. <br> Muchas Gracias!!!!!!!");
+			cuerpo.append("<br><br>Atentamente,<br>");
 			cuerpo.append("<img src=\"/assets/img/garceray/firma.png\">");
 			
 		}
