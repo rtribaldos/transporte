@@ -1,8 +1,10 @@
 package com.digitaldoc.model;
 
 import java.io.Serializable;
+import java.util.Collections;
 import java.util.List;
 
+import javax.jdo.annotations.Element;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
@@ -10,7 +12,7 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION) 
-public class Usuario implements Serializable{
+public class Usuario implements Serializable,  Comparable<Usuario>{
 	/**
 	 * 
 	 */
@@ -200,6 +202,7 @@ public class Usuario implements Serializable{
 	}
 
 	public List<Documento> getFacturas() {
+		Collections.sort(facturas);
 		return facturas;
 	}
 
@@ -305,6 +308,12 @@ public class Usuario implements Serializable{
 
 	public void setIdioma(String idioma) {
 		this.idioma = idioma;
+	}
+
+	@Override
+	public int compareTo(Usuario o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 		
 }

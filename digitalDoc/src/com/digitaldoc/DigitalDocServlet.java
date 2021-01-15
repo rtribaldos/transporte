@@ -2,6 +2,8 @@ package com.digitaldoc;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -297,7 +299,12 @@ public class DigitalDocServlet extends HttpServlet {
 
 					if (usuario.getPerfil().equals("cliente")) {
 						destino = "indexCli.jsp";
-						req.setAttribute("listFacturas", usuario.getFacturas());
+						List<Documento> listFacturas = new ArrayList<Documento>();
+						for(Documento doc : usuario.getFacturas()) {
+							listFacturas.add(doc);
+						}
+						Collections.sort(listFacturas);
+						req.setAttribute("listFacturas", listFacturas);
 					} else if (usuario.getPerfil().equals("acreedor")) {
 						destino = "indexAcre.jsp";
 						List<Anticipo> listAnticipos = AnticiposDAO.getAnticipos(pm);

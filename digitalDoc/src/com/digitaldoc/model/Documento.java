@@ -15,7 +15,7 @@ import com.google.appengine.api.datastore.Key;
 
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION) 
-public class Documento implements Serializable{
+public class Documento implements Serializable,  Comparable<Documento>{
 		
 	private static final long serialVersionUID = 1L;
 
@@ -324,6 +324,11 @@ public class Documento implements Serializable{
 		this.abierto = abierto;
 		this.fecha = fecha;
 		this.url = url;
+	}
+
+	@Override
+	public int compareTo(Documento o) {
+		return o.getFecha().compareTo(getFecha());
 	}
 			
 }

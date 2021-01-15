@@ -24,6 +24,7 @@ public class UsuarioDAO {
 		usuario.setPassword("TGarcerai1972");
 		usuario.setActivo(true);		
 		usuario.setPerfil("SuperAdmin");
+		usuario.setId(1L);
 		pm.makePersistent(usuario);
 	}
 	

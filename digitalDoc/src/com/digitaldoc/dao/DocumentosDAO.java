@@ -1,15 +1,12 @@
 package com.digitaldoc.dao;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
-import com.digitaldoc.model.Anticipo;
 import com.digitaldoc.model.Documento;
-import com.digitaldoc.model.MediaObject;
 import com.digitaldoc.model.PMF;
 
 public class DocumentosDAO {
@@ -97,7 +94,7 @@ public static Documento getDocumento(PersistenceManager pm, String id) throws Ex
 			//
 			query.setFilter("idCancelacion==null &&  fecha > sparam");
 			query.declareParameters("java.util.Date sparam");
-			query.setOrdering("fecha");
+			query.setOrdering("fecha desc");
 			List<Documento> results = (List<Documento>) query.execute(calendar.getTime());
 			
 			return results;
@@ -116,14 +113,12 @@ public static Documento getDocumento(PersistenceManager pm, String id) throws Ex
 		try{
 			Calendar calendar = Calendar.getInstance();
 			calendar.add(Calendar.MONTH, -6);
-			
 			//
 			query.setFilter("fecha > sparam");
 			query.declareParameters("java.util.Date sparam");
-			query.setOrdering("fecha");
-			List<Documento> results = (List<Documento>) query.execute(calendar.getTime());
+			query.setOrdering("fecha desc"); 
+			return (List<Documento>) query.execute(calendar.getTime());
 			
-			return results;
 		}finally{
 			query.closeAll();
 	//		pm.close();
@@ -136,7 +131,7 @@ public static Documento getDocumento(PersistenceManager pm, String id) throws Ex
 	public static List<Documento> getTodas(PersistenceManager pm) throws Exception{
 		Query query = pm.newQuery(Documento.class);
 		try{
-			query.setOrdering("fecha");
+			query.setOrdering("fecha desc");
 			return (List<Documento>) query.execute();
 		}finally{
 			query.closeAll();
